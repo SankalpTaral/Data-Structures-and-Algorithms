@@ -163,6 +163,18 @@ s.print();
 
 
 
+/*
+this solution is brute force trade-off Lets Understand
+
+suppose stack 1 is of fixed 4 stack 2 is size 3 
+
+stack 1 only need 2 elements but remaining 2 spaces are empty na 
+stack 2 needs 5 elements but it can fit only 3 even though 2 blocks
+is avaialable in stack 1  ti cannot use them bc they are s1 occuped 
+ i want a approach where memory is not wasted
+ so that anyone can use how many elements they want unless the array is full
+
+*/
 
 }
 
