@@ -1,0 +1,13 @@
+# Compiled C++ executables
+*.out
+a.out
+main
+*.exe
+
+# Object files
+*.o
+*.obj
+
+# Debug files
+*.dSYM/
+*.gch
