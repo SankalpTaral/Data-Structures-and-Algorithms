@@ -52,6 +52,35 @@ space -> O(N) -> for creating stack2
 
 }
 
+
+
+void recBack(stack<int>&s , int element){
+
+    // issue happening happy case is working
+
+    // edge case 2,10,15,20 ur element is 1  failing for this test case lets handle
+
+
+    //Base Case
+    if(s.empty() || s.top() <= element){
+        s.push(element);
+        return;
+    }
+    int topElement = s.top();
+
+    s.pop();
+
+    recBack(s,element);
+
+    s.push(topElement);
+
+    /*
+    Tc analysis : 
+    Time: O(N)
+Auxiliary space: O(N), due to recursive function calls.
+    */
+}
+
 int main(){
    
     stack<int>s;
@@ -62,9 +91,11 @@ int main(){
     s.push(30);
     s.push(40);
 
-    int element = 0;
+    int element = 1;
 
-    insertElementInCorrectOrderOfSortedStack(s,element);
+
+    recBack(s,element);
+    //insertElementInCorrectOrderOfSortedStack(s,element);
     
     // print the stack to confirm
 
