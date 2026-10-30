@@ -12,9 +12,6 @@ using namespace std;
 // function make sure to pass the input by reference
 void bruteForceApproachingUsingTwoStacks(stack<int>&s){
 
-
-
-
     stack<int>s2; // dynamic u cannot defined manual size over here
 
     /*
@@ -59,7 +56,38 @@ void bruteForceApproachingUsingTwoStacks(stack<int>&s){
 
 }
 
-using namespace std;
+
+void recursionApproach(stack<int>&s, int &count , int middle){
+
+    int ans ;
+    // BASE CASE
+    if(count==middle){
+        ans = s.top();
+        cout << "Middle Element in the stack is " << ans << endl;
+        return;
+    }
+    int topElement = s.top();
+
+
+    s.pop();
+
+    count++;
+
+    recursionApproach(s,count,middle);
+
+    s.push(topElement);
+
+
+        /*
+     Tc : O(n) 
+     Sc: O(n) + O(n) input _ recursive call
+     */
+
+
+
+}
+
+
 int main(){
 stack<int>s;
 s.push(10);
@@ -67,11 +95,18 @@ s.push(20);
 s.push(30);
 s.push(40);
 s.push(50);
+s.push(60);
+s.push(70);
+s.push(80);
+
 
 // [10,20,30,40,50] print the middle node
 
+int count = 0;
 
-bruteForceApproachingUsingTwoStacks(s);
+int middle = s.size()/2;
+
+recursionApproach(s,count,middle);
 
 
   

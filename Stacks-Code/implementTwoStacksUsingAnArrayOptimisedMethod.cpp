@@ -5,7 +5,7 @@
  Refer Problem statement and test cases : 
  https://www.geeksforgeeks.org/problems/implement-two-stacks-in-an-array/1
 
- 
+
 */
 
 class twoStacks {
@@ -85,3 +85,6 @@ class twoStacks {
         
     }
 };
+
+
+
